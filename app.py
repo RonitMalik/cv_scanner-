@@ -20,10 +20,10 @@ def main():
         description=st.text_area(' ')
 
 
-    text=[cv, description]
-    if st.button('Generate Score'):
-        cv_1 = CountVectorizer()
-        countmatrix = cv.fit_transform(text)
+    #text=[cv, description]
+    #if st.button('Generate Score'):
+        #cv_1 = CountVectorizer()
+        #countmatrix = cv.fit_transform(text)
 
     #def similarity_test():
         #text = [cv, description]
