@@ -20,23 +20,23 @@ def main():
         description=st.text_area(' ')
 
 
-    #text=[cv, description]
-    #if st.button('Generate Score'):
-        #cv_1 = CountVectorizer()
-        #countmatrix = cv.fit_transform(text)
+    text=[cv, description]
+    if st.button('Generate Score'):
+        cv_1 = CountVectorizer()
+        countmatrix = cv.fit_transform(text)
 
-    #def similarity_test():
-        #text = [cv, description]
-        #cv_1 = CountVectorizer()
-        #countmatrix = cv.fit_transform(text)
-        #matchPercentage = cosine_similarity(countmatrix)[0][1]*100
-        #matchPercentage = round(matchPercentage, 2)
-        #a = print('Your resume has a score for' + str(matchPercentage)+ '%')
-        #st.write(a)
+    def similarity_test():
+        text = [cv, description]
+        cv_1 = CountVectorizer()
+        countmatrix = cv.fit_transform(text)
+        matchPercentage = cosine_similarity(countmatrix)[0][1]*100
+        matchPercentage = round(matchPercentage, 2)
+        a = print('Your resume has a score for' + str(matchPercentage)+ '%')
+        st.write(a)
 
-    #if cv and description is not None:
-        #if st.button('Generate Score'):
-            #similarity_test()
+    if cv and description is not None:
+        if st.button('Generate Score'):
+            similarity_test()
 
 
 if __name__=='__main__':
